@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <Form />
-    <v-col class="d-flex align-stretch justify-md-space-around flex-wrap">
+    <v-col class="ml-10 d-flex align-stretch justify-md-space-around flex-wrap">
       <v-card class="mb-10 mr-2" width="300" 
       v-for="c in couriers" :key="c.id" :c="c" outlined shaped>
         <v-card-title> Покупатель {{ c.id }} </v-card-title>

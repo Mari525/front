@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <!-- <v-row> -->
-      <!-- <Form /> -->
-    <!-- </v-row> -->
+    <!-- <v-row>
+      <Form />
+    </v-row> -->
     <v-row>
       <v-col class="d-flex align-stretch justify-md-space-around flex-wrap">
         <v-card class="mb-10 mr-2" width="300"
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+// import Form from "../components/Form";
+
 export default {
   name: 'index',
   // data: () => ({
