@@ -1,50 +1,41 @@
 <template>
-    <div>
-        <div>
-            <v-form @submit.prevent="addTestToList">
-                    <!-- <v-btn outlined class="mb-10" @click="show = !show">Скрыть форму</v-btn> -->
-                    <v-text-field v-model="products"></v-text-field>
-
-                    <v-btn outlined class="mb-10" style="margin-top: 20px; display: block;" type="submit">Отправить</v-btn>
-            </v-form>
-        </div>
-        <!-- <div>
-            <v-btn outlined class="mb-10">Показать форму</v-btn>
-        </div> -->
-    </div>
+  <div>
+    <v-form @submit.prevent="addCustomer">
+      <h2>Добавить покупателя:</h2>
+      <v-text-field v-model="name"></v-text-field>
+      <v-text-field v-model="middlename"></v-text-field>
+      <v-text-field v-model="surname"></v-text-field>
+      <v-text-field v-model="email"></v-text-field>
+      <v-text-field v-model="phone"></v-text-field>
+      <v-text-field v-model="address"></v-text-field>
+      <v-btn outlined class="mb-10" type="submit">Отправить</v-btn>
+    </v-form>
+  </div>
 </template>
 
 <script>
   export default {
-    name: `Form`,
+    name: 'Form',
     data: () => ({
-      show: true,
-      products: ``,
+      name: '',
+      middlename: '',
+      surname: '',
+      email: '',
+      phone: '',
+      address: '',
     }),
     methods: {
-        addTestToList(e) {
-        this.$store.dispatch('createTest', {
-            products: this.products,
+        addCustomer(e) {
+        this.$store.dispatch('createOrder', {
+            name: this.name,
+            middlename: this.middlename,
+            surname: this.surname,
+            email: this.email,
+            phone: this.phone,
+            address: this.address,
         })
-        this.products = ''
-    },
+        this.name = ''
+      },
     }
-    // methods: {
-    //     send: function (evt) {
-    //         evt.preventDefault();
-    //         this.$store.dispatch('SEND_FORM_DATA', {
-    //                 products: this.products
-    //             });
-            
-    //             this.products = ``
-    //             this.$store.dispatch('GET_ORDERS_DATA');
-    //         }
-    //     },
-    // computed: {
-    //   form: function () {
-    //     this.$store.dispatch('GET_FORM_DATA');
-    //     return this.$store.getters.GET_FORM_DATA;
-    //   }
-    // }
   };
 </script>

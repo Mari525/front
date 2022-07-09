@@ -6,7 +6,7 @@ export const ApiRoutes = {
 };
 
 export const ApiInformation = {
-  BASE_URL: `http://127.0.0.1:8000/api/order`,
+  BASE_URL: `http://127.0.0.1:8000/api/order/`,
   TIMEOUT: 50000,
   WITH_CREDENTIALS: false
 };

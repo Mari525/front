@@ -1,12 +1,13 @@
 <template>
   <v-container>
-    <v-row>
-      <Form />
-    </v-row>
+    <!-- <v-row> -->
+      <!-- <Form /> -->
+    <!-- </v-row> -->
     <v-row>
       <v-col class="d-flex align-stretch justify-md-space-around flex-wrap">
-        <v-card v-for="order in orders" :key="order.id" outlined shaped>
-          <v-card-title> Заказ {{ order.id }} </v-card-title>
+        <v-card class="mb-10 mr-2" width="300"
+        v-for="order in orders" :key="order.id" outlined shaped>
+          <v-card-title>Заказ {{ order.id }} </v-card-title>
           <v-card-text>Состав заказа: {{ order.products }} </v-card-text>
         </v-card>
       </v-col>
@@ -15,8 +16,6 @@
 </template>
 
 <script>
-import Form from "../components/Form";
-
 export default {
   name: 'index',
   // data: () => ({

@@ -2,11 +2,11 @@
   <v-app dark>
     <v-container fluid>
       <v-app-bar color="green darken-4" class="d-flex">
-        <h1>Delivery</h1>
-        <nuxt-link to="/">
+        <h1 class="mr-16">Delivery</h1>
+        <nuxt-link class="white--text text-button mr-5" to="/">
           Заказы
         </nuxt-link>
-        <nuxt-link to="/couriers">
+        <nuxt-link class="white--text text-button mr-5" to="/couriers">
           Курьеры
         </nuxt-link>
       </v-app-bar>
@@ -17,7 +17,7 @@
       </v-container>
     </v-main>
     <v-footer>
-      (c) Мария Шерстнева, 201-321
+      Мария Шерстнева, 201-321
     </v-footer>
   </v-app>
 </template>
