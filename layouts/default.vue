@@ -6,8 +6,8 @@
         <nuxt-link class="white--text text-button mr-5" to="/">
           Заказы
         </nuxt-link>
-        <nuxt-link class="white--text text-button mr-5" to="/couriers">
-          Курьеры
+        <nuxt-link class="white--text text-button mr-5" to="/customers">
+          Покупатели
         </nuxt-link>
       </v-app-bar>
     </v-container>

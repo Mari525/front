@@ -3,7 +3,7 @@
     <Form />
     <v-col class="ml-10 d-flex align-stretch justify-md-space-around flex-wrap">
       <v-card class="mb-10 mr-2" width="300" 
-      v-for="c in couriers" :key="c.id" :c="c" outlined shaped>
+      v-for="c in customers" :key="c.id" :c="c" outlined shaped>
         <v-card-title> Покупатель {{ c.id }} </v-card-title>
         <v-card-text>Имя: {{ c.name }} </v-card-text>
         <v-card-text>Отчество: {{ c.middlename }} </v-card-text>
@@ -20,13 +20,13 @@
 import Form from "../components/Form";
 
 export default {
-  name: 'couriers',
+  name: 'customers',
   data: () => ({
-    couriers : []
+    customers : []
   }),
   async mounted() {
-		this.couriers = await this.$axios.$get('https://mari525.pythonanywhere.com/api/customer/');
-		console.log(this.couriers);
+		this.customers = await this.$axios.$get('https://mari525.pythonanywhere.com/api/customer/');
+		console.log(this.customers);
 	},
 }
 </script>
